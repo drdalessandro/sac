@@ -3,8 +3,6 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import PageLayout from '../../components/PageLayout';
 import { measurementsMeta } from './Measurement';
 
-const LabResults = lazy(() => import('./LabResults'));
-const MainResult = lazy(() => import('./MainResult'));
 const Medications = lazy(() => import('./Medications'));
 const Medication = lazy(() => import('./Medication'));
 const PrescriptionRenewal = lazy(() => import('./PrescriptionRenewal'));
@@ -15,15 +13,13 @@ const Measurement = lazy(() => import('./Measurement'));
 export const sideMenu = {
   title: 'Registros de Salud',
   menu: [
-    
     { name: 'Vitales',
       href: '/health-record/vitals',
       subMenu: Object.values(measurementsMeta).map(({ title, id }) => ({
         name: title,
         href: `/health-record/vitals/${id}`,
       })),
-        },
-    { name: 'Laboratorio', href: '/health-record/lab-results' },
+    },
     { name: 'Medicación', href: '/health-record/medications' },
     { name: 'Vacunas', href: '/health-record/vaccines' },
   ],
@@ -34,8 +30,6 @@ export default function HealthRecord(): JSX.Element {
     <PageLayout sideMenu={sideMenu}>
       <Routes>
         <Route index element={<Navigate replace to={sideMenu.menu[0].href} />} />
-        <Route path="lab-results/*" element={<LabResults />} />
-        <Route path="lab-results/:resultId" element={<MainResult />} />
         <Route path="medications" element={<Medications />} />
         <Route path="medications/:medicationId" element={<Medication />} />
         <Route path="medications/:medicationId/prescription-renewal" element={<PrescriptionRenewal />} />

@@ -9,6 +9,7 @@ import { ReactComponent as Logo } from '../img/logo.svg';
 
 const navigation = [
   { name: 'Datos', href: '/health-record' },
+  { name: 'Laboratorio', href: '/laboratory' },
   { name: 'Comunicación', href: '/messages' },
   { name: 'Bienestar', href: '/care-plan' },
   { name: 'Seguimiento', href: '/get-care' },
