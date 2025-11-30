@@ -424,6 +424,176 @@ case 'Duración Período':
         effectiveDateTime: date,
         status: 'final',
       };
+    case 'Glucemia':
+      return {
+        resourceType: 'Observation',
+        subject,
+	category: [
+	    {
+		"coding": [
+	    {
+        	"system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        	"code": "laboratory",
+        	"display": "Laboratory"
+    	    }
+    		    ]
+	    }
+	],
+        code: {
+          coding: [
+            {
+              code: '2339-0',
+              display: 'Glucose [Mass/volume] in Blood',
+              system: 'http://loinc.org',
+            },
+          ],
+          text: 'Glucemia',
+        },
+        valueQuantity: {
+          code: 'mg/dL',
+          system: 'http://unitsofmeasure.org',
+          unit: 'mg/dL',
+          value: Number(firstValue),
+        },
+        effectiveDateTime: date,
+        status: 'final',
+      };
+    case 'Hemoglobina Glicosilada':
+      return {
+        resourceType: 'Observation',
+        subject,
+	category: [
+	    {
+		"coding": [
+	    {
+        	"system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        	"code": "laboratory",
+        	"display": "Laboratory"
+    	    }
+    		    ]
+	    }
+	],
+        code: {
+          coding: [
+            {
+              code: '4548-4',
+              display: 'Hemoglobin A1c/Hemoglobin.total in Blood',
+              system: 'http://loinc.org',
+            },
+          ],
+          text: 'Hemoglobina Glicosilada',
+        },
+        valueQuantity: {
+          code: '%',
+          system: 'http://unitsofmeasure.org',
+          unit: '%',
+          value: Number(firstValue),
+        },
+        effectiveDateTime: date,
+        status: 'final',
+      };
+    case 'HDL Colesterol':
+      return {
+        resourceType: 'Observation',
+        subject,
+	category: [
+	    {
+		"coding": [
+	    {
+        	"system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        	"code": "laboratory",
+        	"display": "Laboratory"
+    	    }
+    		    ]
+	    }
+	],
+        code: {
+          coding: [
+            {
+              code: '2085-9',
+              display: 'Cholesterol in HDL [Mass/volume] in Serum or Plasma',
+              system: 'http://loinc.org',
+            },
+          ],
+          text: 'HDL Colesterol',
+        },
+        valueQuantity: {
+          code: 'mg/dL',
+          system: 'http://unitsofmeasure.org',
+          unit: 'mg/dL',
+          value: Number(firstValue),
+        },
+        effectiveDateTime: date,
+        status: 'final',
+      };
+    case 'No-HDL Colesterol':
+      return {
+        resourceType: 'Observation',
+        subject,
+	category: [
+	    {
+		"coding": [
+	    {
+        	"system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        	"code": "laboratory",
+        	"display": "Laboratory"
+    	    }
+    		    ]
+	    }
+	],
+        code: {
+          coding: [
+            {
+              code: '43396-1',
+              display: 'Cholesterol non HDL [Mass/volume] in Serum or Plasma',
+              system: 'http://loinc.org',
+            },
+          ],
+          text: 'No-HDL Colesterol',
+        },
+        valueQuantity: {
+          code: 'mg/dL',
+          system: 'http://unitsofmeasure.org',
+          unit: 'mg/dL',
+          value: Number(firstValue),
+        },
+        effectiveDateTime: date,
+        status: 'final',
+      };
+    case 'Triglicéridos':
+      return {
+        resourceType: 'Observation',
+        subject,
+	category: [
+	    {
+		"coding": [
+	    {
+        	"system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        	"code": "laboratory",
+        	"display": "Laboratory"
+    	    }
+    		    ]
+	    }
+	],
+        code: {
+          coding: [
+            {
+              code: '2571-8',
+              display: 'Triglyceride [Mass/volume] in Serum or Plasma',
+              system: 'http://loinc.org',
+            },
+          ],
+          text: 'Triglicéridos',
+        },
+        valueQuantity: {
+          code: 'mg/dL',
+          system: 'http://unitsofmeasure.org',
+          unit: 'mg/dL',
+          value: Number(firstValue),
+        },
+        effectiveDateTime: date,
+        status: 'final',
+      };
     default:
       return { resourceType: 'Observation' };
   }
