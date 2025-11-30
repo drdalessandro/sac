@@ -12,11 +12,11 @@
   </a>
 </p>
 
-![Foo Medical Screenshot](screenshot.png)
+![Programa Residentes Screenshot](screenshot.png)
 
 ### What is Foo Medical?
 
-[Foo Medical](https://foomedical.com/) is a **ready to use medical practice sample app** that's open source. It's meant for developers to clone, customize and run.
+[Programa Residentes SAC ](https://sac.epa-bienestar.com.ar/) is a **ready to use medical practice sample app** that's open source. It's meant for developers to clone, customize and run.
 
 ### Features
 
