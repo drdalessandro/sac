@@ -1,4 +1,4 @@
-<h1 align="center">Foo Medical</h1>
+<h1 align="center">Programa Residentes</h1>
 <p align="center">A free and open-source healthcare webapp from the Medplum team.</p>
 <p align="center">
   <a href="https://github.com/medplum/foomedical/actions">
